@@ -1,16 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-/*Peng Gu
- *10/22/2018
+/*Peng Gu, Xuran Wang
+ *10/23/2018
  */
 
 int main(){
     int pos=0;
     int input;
     int uCase=0;
-    char arr[101];
-    char arrN[101];
+    char arr[104];
+    char arrN[104];
     while(EOF != (input = getchar())){
 	if (input>='a' && input<='z'){
 	    arr[pos] = input;
@@ -29,7 +29,6 @@ int main(){
 			uCase=0;
 		    }
 		    printf("%syay",arr);
-		    arr[0]='\0';
 		}
 		else{
 		    pos=1;
@@ -43,12 +42,16 @@ int main(){
 			uCase=0;
 		    }
     		    printf("%say", arrN);
-		    arr[0] = '\0';
 		    pos=0;
 		    while(arrN[pos]!='\0'){
-			arr[pos]='\0';
+			arrN[pos]='\0';
 			pos++;
-		    }	
+		    }
+		}
+		pos=0;
+		while(arr[pos]!='\0'){
+		    arr[pos]='\0';
+		    pos++;
 		}
 		pos=0;
 	    }
