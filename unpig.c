@@ -33,7 +33,8 @@ int main(int argc, char **argv){
 	    if (arr[0]!='\0'){
 		int length;
 		for(length=0; arr[length] != '\0'; length++);
-		if(arr[length-3]=='y'&&arr[0]!='y'){
+		// calculate the total length of the word
+		if(arr[length-3]=='y'&&arr[0]!='y'){// in this case just remove "yay"
 		    if(uCase==1){
 			arr[0] = arr[0] +'A' -'a';
 			uCase=0;
@@ -41,7 +42,7 @@ int main(int argc, char **argv){
 		    strncpy(arrN, arr, length-3);
 		    printf("%s", arrN);
 		}
-		else if(arr[length-3]=='y'&&arr[0]=='y'){
+		else if(arr[length-3]=='y'&&arr[0]=='y'){// add y and remove "yay"
 		    arrN[0]='y';
 		    strncat(arrN, arr, length-3);
 		    if(uCase==1){
@@ -49,8 +50,8 @@ int main(int argc, char **argv){
 			uCase=0;
 		    }
 		    printf("%s", arrN);
-		}else{
-		    if(arr[length-3]!='u'){
+		}else{// case 2
+		    if(arr[length-3]!='u'){// if not the "qu" case
 		        arrN[0]=arr[length-3];
 			strncat(arrN, arr, length-3);
 		    }
