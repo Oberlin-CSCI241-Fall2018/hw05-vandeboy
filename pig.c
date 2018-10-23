@@ -5,26 +5,13 @@
  *10/22/2018
  */
 
-void pig();
-
 int main(){
-    int input;
-    while(EOF != (input = getchar())){
-	pig();
-    }
-    return 0;
-}
-
-void pig(){
     int pos=0;
     int input;
     int uCase=0;
-    int posN=0;
+    char arr[101];
+    char arrN[101];
     while(EOF != (input = getchar())){
-	char arr[101];
-	char arrN[101];
-	uCase=0;
-	pos=0;
 	if (input>='a' && input<='z'){
 	    arr[pos] = input;
 	    pos++;
@@ -35,32 +22,40 @@ void pig(){
 	    uCase = 1;
 	}
 	else{
-	    ungetc(input, stdin);
 	    if (arr[0]!='\0'){
-		if(strchr("aeiou", (char)arr[0])){
+		if(strchr("aeiou", arr[0])){
 		    if(uCase==1){
 			arr[0] = arr[0] +'A' -'a';
+			uCase=0;
 		    }
-		    printf("%syay\n",arr);
+		    printf("%syay",arr);
+		    arr[0]='\0';
 		}
 		else{
-		    arrN[0]=arr[0];
-		    arr[0]='\0';
-		    posN=1;
 		    pos=1;
-		    while((!strchr("aeiouy", (char)arr[pos]))||(arr[pos-1]=='q'&&arr[pos]=='u')){
-			arrN[posN]=arr[pos];
+		    while((!strchr("aeiouy", arr[pos]))||(arr[pos-1]=='q'&&arr[pos]=='u')){
 			pos++;
 		    }
+		    strcpy(arrN, arr+pos);
+	    	    strncat(arrN, arr, pos);
 		    if(uCase==1){
-			arr[pos]=arr[pos]-'a'+'A';
+			arrN[0]=arrN[0]-'a'+'A';
+			uCase=0;
 		    }
-		    printf("%s%say\n", arr, arrN);
+    		    printf("%say", arrN);
+		    arr[0] = '\0';
+		    pos=0;
+		    while(arrN[pos]!='\0'){
+			arr[pos]='\0';
+			pos++;
+		    }	
 		}
+		pos=0;
 	    }
-	    putchar(stdin);
+	    putchar(input);
 	}
     }
+    return 0;
 }
 
 
