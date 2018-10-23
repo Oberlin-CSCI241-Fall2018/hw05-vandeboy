@@ -1,0 +1,30 @@
+.\" man page for pig.c
+.\" Peng Gu & Xuran Wang - 10/23/2018
+
+.TH pig 1 "10/23/2018" "CSCI 241" "Oberlin College"
+
+.SH Name
+.B pig
+\- read in English text and convert it into pig latin
+
+.SH SYNOPSIS
+.B pig
+
+.SH Pig Latin Translation Rules
+If the string begins with a vowel("a" "e" "i" "o" "u") add "yay" to the end of the string.
+Otherwise, find the first occurance of a vowel, then move all the letter before the vowel to the end of the word and add "ay". 
+(In this context, "y" should be considered a vowel.)
+Punctuation and capitalization is preserved.
+"qu" should be treated as a consonant, rather than a single character.
+Hyphenated words is treated as two words.
+
+.SH OPTIONS
+.IP "-?"
+.IP "-h"
+prints out a brief usage message
+
+.SH AUTHOR
+Peng Gu & Xuran Wang
+
+.SH BUGS
+None so far.

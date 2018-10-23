@@ -1,0 +1,29 @@
+.\" man page for unpig.c
+.\" Peng Gu & Xuran Wang - 10/23/2018
+
+.TH unpig 1 "10/23/2018" "CSCI 241" "Oberlin College"
+
+.SH Name
+.B unpig
+\- read in pig text and convert it into English text
+
+.SH SYNOPSIS
+.B unpig
+
+.SH Pig Latin Translation Rules
+If the string begins with a vowel("a" "e" "i" "o" "u"), add "yay" to the end.
+Otherwise, find 1st vowel and move all letter before the vowel to the end of the word and add "ay". ("y" is considered a vowel. in this statement).
+Punctuation and capitalization is preserved.
+"qu" is a consonant.
+Hyphenated words is treated as two words.
+
+.SH OPTIONS
+.IP "-?"
+.IP "-h"
+prints out a brief usage message
+
+.SH AUTHOR
+Peng Gu & Xuran Wang
+
+.SH BUGS
+None so far.
