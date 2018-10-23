@@ -41,9 +41,15 @@ int main(int argc, char **argv){
 		}
 		else{// if not begin with a vowel
 		    pos=1;
+		    int vowel=1;// check if there is any vowel
 		    while((!strchr("aeiouy", arr[pos]))||(arr[pos-1]=='q'&&arr[pos]=='u')){
+			if(arr[pos+1]=='\0'){
+			    // if there is no vowel in the word
+			    vowel=0;
+			}
 			pos++;// skip to the 1st vowel
 		    }
+		    if(vowel==1){
 		    strcpy(arrN, arr+pos);
 	    	    strncat(arrN, arr, pos);
 		    if(uCase==1){
@@ -51,6 +57,13 @@ int main(int argc, char **argv){
 			uCase=0;
 		    }
     		    printf("%say", arrN);
+		    }
+		    else{// if there is no vowel in the word, just print arr
+			if(uCase==1){
+			    arr[0]=arr[0]-'a'+'A';
+			}
+			printf("%s", arr);
+		    }
 		    pos=0;
 		    while(arrN[pos]!='\0'){// set buffer arrN to empty
 			arrN[pos]='\0';
