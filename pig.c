@@ -5,12 +5,20 @@
  *10/23/2018
  */
 
-int main(){
+int main(int argc, char **argv){
+    if(argc>1){
+	printf("How to use pig.c:\n");
+	printf("Type \"./pig < inputFile > outputFile\" \n");
+	printf("\n");
+	printf("pig.c uses an algorithm to alter every word in the inputFile,\n");
+	printf("while making no change to non-alphabets\n");
+	exit(1);
+    }
     int pos=0;
     int input;
     int uCase=0;
-    char arr[104];
-    char arrN[104];
+    char arr[104] = {[0 ... 103] = '\0'};
+    char arrN[104] = {[0 ... 103] = '\0'};
     while(EOF != (input = getchar())){
 	if (input>='a' && input<='z'){
 	    arr[pos] = input;
