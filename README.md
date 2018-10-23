@@ -1,9 +1,9 @@
 # HW5
 
 ## Author
-Xuran Wang
-Peng Gu
-**We affirm that we have adhered to the Honor Code in this assignment.**
+- Xuran Wang
+- Peng Gu
+- **We affirm that we have adhered to the Honor Code in this assignment.**
 
 ## Pig
 - read in English text and convert it into pig latin
