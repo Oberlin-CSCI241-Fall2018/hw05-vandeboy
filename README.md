@@ -26,6 +26,6 @@
 - 1 hour in total
 
 ## Extra credit - elmer
-- change the English text from standard input and convert it to Elmer-speak
+- change the English text from standard input and convert it to Elmer-speak(From https://en.wikipedia.org/wiki/Elmer_Fudd)
 - elmer.c elmer.1 
 - 1 hour in total
