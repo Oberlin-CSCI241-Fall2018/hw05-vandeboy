@@ -20,4 +20,12 @@
 - pig.1 unpig.1
 - 30 minutes in total
 
-## Extra credit
+## Extra credit - izzle
+- Insert "-zzle" after a word's last pre-vowel consonant while discarding the remaining letters. (From https://en.wikipedia.org/wiki/Language_game)
+- izzle.c izzle.1
+- 1 hour in total
+
+## Extra credit - elmer
+- change the English text from standard input and convert it to Elmer-speak
+- elmer.c elmer.1 
+- 1 hour in total

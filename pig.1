@@ -3,19 +3,24 @@
 
 .TH pig 1 "10/23/2018" "CSCI 241" "Oberlin College"
 
-.SH Name
+.SH NAME
 .B pig
-\- read in English text and convert it into pig latin
+\- read in English text from standard input and convert it into pig latin
 
 .SH SYNOPSIS
 .B pig
 
 .SH Pig Latin Translation Rules
 If the string begins with a vowel("a" "e" "i" "o" "u") add "yay" to the end of the string.
+.P
 Otherwise, find the first occurance of a vowel, then move all the letter before the vowel to the end of the word and add "ay". 
+.P
 (In this context, "y" should be considered a vowel.)
+.P
 Punctuation and capitalization is preserved.
+.P
 "qu" should be treated as a consonant, rather than a single character.
+.P
 Hyphenated words is treated as two words.
 
 .SH OPTIONS
